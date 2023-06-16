@@ -1,93 +1,46 @@
-<!--- 
-Open Source Assistive Technology: GitHub Readme Template
- --->
+# Overview
 
-<!---
-INSTRUCTIONS
-This is a markdown template for creating the README.md file in a GitHub repository. This file is rendered and displayed automatically when someone visits the repository.
+The switch modifier is an affordable accessibility device that enables specific switch output functions. With the provided Arduino code, the switch modifier outputs a momentary switch signal for a specific hold duration, in response to a digital input signal. Regardless of the duration of the input signal, the output can be set to any duration from 20 to 500 milliseconds. Manually turning a potentiometer allows for adjustment in output duration.
 
-This document includes helper text that will not be displayed when rendered. Any text between the less-than sign + exclamation mark + three hyphen-minus (<!---) and matching three hyphen-minus + greater-than sign will not be displayed. This helper text can be deleted once the corresponding section is completed.
+# Usage
 
- --->
- 
- <!--- 
-TITLE
-Should match the name of the GitHub repository. Choose something descriptive rather than whimsical. 
- --->
- # (todo:Project Title)
+With the provided Arduino code, the intended usage is for applications that require fast, short duration switch activation, where the user’s motor control is too slow to achieve such movement. To achieve multiple switch activations, the user must release the input switch first before activating it again. Minor adjustments to the code may provide for longer output durations, or latching functionality.
 
-<!--- 
-SUMMARY
-A brief summary of the project. What it does, who it is for, how much it costs.
- --->
-The (todo:Project Title) is for making it easier to document Open-Source Assistive Technology devices. It is intended for use by makers. The device is comprised of off-the-shelf electronics and 3D printed parts. The overall cost of materials is about $8 (plus $8 for component shipping).
+# Disclaimer: Construction, use and modification of this device is the responsibility of the end user. The Stan Cassidy Centre for Rehabilitation and its employees are not responsible for any damages or harm as a result of the construction or use of this device.
 
-<!--- 
-PHOTO
+# Build Instructions
 
- --->
-![Image Description](Photos/Device_Photo.jpg)
+# Tools Required
 
-<!--- 
-## More info at
- - [Makers Making Change Forum Thread](TBD) 
- - [Makers Making Change Project Page](TBD)
- --->
+- Soldering Iron
+- Screw Driver
+- Wire Cutters / wire strippers
+- Super Glue
+
+# 3D Printing
+
+The lid and the base are printed face up with no supports. The middle piece is printed in its intended usage orientation (lettering upright) and will require supports in the bottom battery compartment, and port holes in the walls. The original box was printed on a Raise3D N2 printer using PLA. Speed printing is approximately 7.5 hours and high quality is approximately 18.5 hours.
+
+# Assembling the Circuit
+
+Take care in the placement of the electronics on the proto board to allow for everything to fit. Only attach the back end of the nano controller up to pins D2 and A7 (inclusive). The remaining portion of the controller will overhang and rest on the support structure. Ensure the nano controller will line up with the access port on the side wall of the 3D printed box.
+Please refer to the following diagram for assembling the rest of the circuit.
+Note: Do not solder the battery holder wires on until the 3D printed box is ready and the wires can be passed through the access hole.
+
+# Assembling the Box
+
+1. Remove all 3D printed supports from the middle section of the box.
+2. Feed the battery holder wires through the access hole and mount it in the bottom compartment using two M2x6 screws.
+3. Mount the assembled proto board to the standoffs in the upper compartment using two M2x6 screws.
+4. Solder the battery wires to the appropriate locations on the proto board. Ensure not to melt the plastic box.
+5. Mount the auxiliary mono jacks in the appropriate port holes in the walls of the box.
+6. Mount the ON/OFF switch in the remaining port hole in the wall of the box using super glue. Ensure not to glue the switch stuck in the ON or OFF position.
+7. Attach the lid of the box using four M2x20 screws. Ensure not to over torque the screws and damage the lid. Also, ensure that no wires are pinched between the lid and the walls of the box.
+8. Insert four AA batteries (not included in list of materials) into the battery holder.
+9. Attach the base of the box using found M2x20 screws. Ensure not to over torque the screws and damage the base.
 
 
-## Getting Started
-<!--- 
-Include an overall idea of what major steps are required to build the device.
- --->
-
-### 1. Order the Off-The-Shelf Components
-The [Bill of Materials](/Documentation/ProductTitle_BOM_v0.1.xlsx) lists all of the parts and components required to build the (todo:Project Title). The electronic components may be available locally, but will probably need to be ordered online. 
-
-### 2. Print the 3D Printable components
-Print the components for the switch tester case and choose an option for the case.
-
-All of the files and individual print files can be in the [/Build_Files/3D_Printing_Files](/Build_Files/3D_Printing_Files/) folder.
-
-### 3. Assemble the (todo:Product Title)
-Reference the [assembly guide](/Documentation/ProductTitle_Assembly_Guide_v1.0.pdf) for the tools and steps required to build each portion.
-
-## Files
-<!---
-FILES
-This section includes all the information and files required to build and modify the device, including documentation, design files, and build files. 
---->
-
-### Documentation
-<!---
-DOCUMENTATION
-
---->
-| Document | Version | Link |
-|----------|---------|------|
-| Design Specifications| 1.0 | [ProjectTitle_Design_Specifications](/Documentation//Working_Files/ProjectTitle_Design_Rationale_v0.1.pdf) |
-| Design Rationale     | 1.0 | [ProjectTitle_Design_Rationale](/Documentation/ProjectTitle_Design_Rationale_v0.1.pdf) |
-| Bill of Materials    | 1.0 | [ProjectTitle_BOM](/Documentation/ProjectTitle_BOM_v0.1.xlsx) |
-| Assembly Guide       | 1.0 | [ProjectTitle_Instructions](/Documentation/ProjectTitle_Assembly_Guide_v0.1.pdf) |
-| Maker Checklist      | 1.0 | [ProjectTitle_Checklist](/Documentation/ProjectTitle_Maker_Checklist_v0.1.pdf) |
-| User Quick Guide     | 1.0 | [ProjectTitle_Quick_Guide](/Documentation/ProjectTitle_Quick_Guide_v0.1.pdf)           |
-| Changelog            | 1.0 | [ProjectTitle_Changelog](/Documentation/ProjectTitle_Changelog_v0.1.pdf)               |
-
-### Design Files
-<!---
-DESIGN FILES
-If possible, include a copy of original design files to facilitate easy editing and customization.
---->
- - [CAD Files](/Design_Files/CAD)
- - [PCB Files](/Design_Files/PCB)
-
-### Build Files
-<!---
-BUILD FILES
-This section contains the files for building the device.
---->
- - [3D Printing Files](/Build_Files/3D_Printing)
- - [Custom PCB Files](/Build_Files/Custom_PCB)
- - [V1.0 3MF](/Build_Files/3D_Printing/ProductTitle_v1.0.3mf)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ## License
 <!---
